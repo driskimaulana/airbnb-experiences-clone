@@ -10,6 +10,10 @@ code {
     monospace;
 }
 
+section {
+  padding: 20px;
+}
+
 .navbar {
   display: flex;
   height: 70px;
@@ -48,7 +52,11 @@ code {
   max-width: 320px;
 }
 .card {
-  margin: 20px;
+  /* margin: 20px; */
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
 
 .card--image {
@@ -58,7 +66,7 @@ code {
 }
 
 .card--rating {
-  margin-top: 0;
+  margin-top: 7px;
   display: flex;
   align-items: center;
   column-gap: 5px;
@@ -105,4 +113,31 @@ code {
   border-radius: 2px;
   position: relative;
   width: 61px;
+}
+
+.card--title{
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* .card--stats {
+
+} */
+
+.card--list {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+  overflow-x: auto;
+}
+
+.card--badge {
+  position: absolute;
+  background-color: #FFFFFF;
+  color: black;
+  font-size: 10.24px;
+  left: 10px;
+  top: 10px;
+  border-radius: 4px;
+  padding: 2px 7px;
 }
